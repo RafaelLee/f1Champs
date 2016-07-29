@@ -42,17 +42,17 @@ function DriverRoundsController(DriverRoundsService,$routeParams) {
   var vm = this; //Trying to fix the bug, so you do not need to click F5 every time you load a new Season
   vm.driverId = DriverRoundsService.driverId;
   vm.test = function (driverId) {
- return (driverId === vm.driverId);
- };
+  return (driverId === vm.driverId);
+};
   ((DriverRoundsService) => {
     vm.rounds = [];
     DriverRoundsService
     .list()
     .success(function(data){ //Through my controller promises to return the data brought via json. It adds to the list, and adds to the array rounds. If something goes wrong, the error is printed on the console.
-      vm.rounds = data.MRData.RaceTable.Races; //Here I take the first part, to the array. And in the view use the rest of the way to go to the field you want to display
+    vm.rounds = data.MRData.RaceTable.Races; //Here I take the first part, to the array. And in the view use the rest of the way to go to the field you want to display
     })
     .error(function(err){
-      console.log('Erro: ', err);
+    console.log('Erro: ', err);
     });
   })(DriverRoundsService);
   DriverRoundsController.$inject = ['$routeParams','$http'];

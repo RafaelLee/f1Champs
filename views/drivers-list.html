@@ -10,9 +10,9 @@
   <tbody>
     <tr class="item" id="driversL" data-ng-repeat="driver in Driver.drivers ">
       <td></td>
-      <td><a href="#/drivers/{{ driver.season }}/{{ driver.DriverStandings[0].Driver.driverId }}"> {{ driver.season }} </a></td>
-      <td><a href="#/drivers/{{ driver.season }}/{{ driver.DriverStandings[0].Driver.driverId }}">{{ driver.DriverStandings[0].Driver.givenName }} {{ driver.DriverStandings[0].Driver.familyName}} </a></td>
-      <td><a href="#/drivers/{{ driver.season }}/{{ driver.DriverStandings[0].Driver.driverId }}">{{ driver.DriverStandings[0].wins }}</td>
+      <td><a ng-href="#/drivers/{{ driver.season }}/{{ driver.DriverStandings[0].Driver.driverId }}"> {{ driver.season }} </a></td>
+      <td><a ng-href="#/drivers/{{ driver.season }}/{{ driver.DriverStandings[0].Driver.driverId }}">{{ driver.DriverStandings[0].Driver.givenName }} {{ driver.DriverStandings[0].Driver.familyName}} </a></td>
+      <td><a ng-href="#/drivers/{{ driver.season }}/{{ driver.DriverStandings[0].Driver.driverId }}">{{ driver.DriverStandings[0].wins }}</td>
     </tr>
   </tbody>
     {{Driver.test()}}

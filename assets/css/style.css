@@ -82,3 +82,6 @@ th{
 .strike {
   text-decoration: line-through;
 }
+#bug{
+  color: grey;
+}
