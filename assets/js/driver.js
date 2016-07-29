@@ -39,15 +39,11 @@ function DriverRoundsService($http,$routeParams) { //Service receiving the year 
 }
 
 function DriverRoundsController(DriverRoundsService,$routeParams) {
-  var vm = this;
+  var vm = this; //Trying to fix the bug, so you do not need to click F5 every time you load a new Season
   vm.driverId = DriverRoundsService.driverId;
-  vm.teste = function (driverId) { //Here I try to create a function that returns me true only if the id Champion coincides with Id being printed and won this Round
-    if (driverId === vm.driverId) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  vm.test = function (driverId) {
+ return (driverId === vm.driverId);
+ };
   ((DriverRoundsService) => {
     vm.rounds = [];
     DriverRoundsService

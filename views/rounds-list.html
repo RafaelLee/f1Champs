@@ -6,16 +6,16 @@
       <th>Round</th>
       <th>Circuit Name</th>
       <th>First Place</th>
+
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr data-ng-class="{highlight: !DriverRounds.teste}" data-ng-repeat="round in DriverRounds.rounds ">
+    <tr data-ng-class="{highlight: DriverRounds.test(round.Results[0].Driver.driverId)}" data-ng-repeat="round in DriverRounds.rounds ">
       <td></td>
       <td>{{ round.round }}</td>
       <td>{{ round.raceName }}</td>
       <td>{{ round.Results[0].Driver.givenName }} {{ round.Results[0].Driver.familyName }}</td>
-
       <td></td>
     </tr>
   </tbody>
