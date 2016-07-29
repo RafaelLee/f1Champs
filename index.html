@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-ng-app="Champs">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Champs F1</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body id="allApp">
+  <section class="row wrapper">
+    <h1>F1 Champs</h1>
+    <ul class="menu">
+      <li><a href="#/drivers">List of World Champions</a></li>
+    </ul>
+    <div data-ng-view></div>
+  </section>
+
+  <script src="https://code.angularjs.org/1.5.4/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.4/angular-route.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.4/angular-animate.min.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/driver.js"></script>
+</body>
+</html>
